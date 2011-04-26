@@ -1,0 +1,108 @@
+<html>
+<head>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+	<script type="text/javascript" src="cssHolo.js"></script>
+
+	<link rel="stylesheet" href="cssHolo.css" type="text/css" />
+	<style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		div {
+			width: 100px;
+			height: 100px;
+			position: absolute;
+		}
+		h1 {
+			font: bold 30px Georgia;
+			position: absolute;
+			left: 20px;
+			top: 20px;
+			z-index: 2;
+			line-height: 0;
+		}
+		.hello-shadow {
+			z-index: 1;
+			color: #999;
+		}
+		#first {
+			z-index: 10;
+			left: 300px;
+			top: 200px;
+			background-color: #34F9A6;
+		}
+		#second {
+			z-index: 20;
+			left: 100px;
+			top: 400px;
+			background-color: #D08DAA;
+		}
+		.shadows {
+			z-index: 8;
+			background-color: #DDD;
+		}
+		#first-shadow {
+			left: 303px;
+			top: 203px;
+		}
+		#second-shadow {
+			
+			left: 103px;
+			top: 403px;
+		}
+		#all {
+			position: relative;
+			width: 600px;
+			height: 600px;
+			margin-top: 50px;
+			margin-left: 50px;
+			background-color: #EEE;
+		}
+		li {
+			font: 10px Georgia;
+		}
+		ul {
+			list-style-type: none;
+			padding-left: 5px;
+		}
+
+	</style>
+	<script type="text/javascript">
+	$(function() {
+		
+		$('.holo-element').cssHolo({'skew': 10});
+		$('.shadows, .hello-shadow').cssHolo({'skew': 5});
+		
+	
+	});
+	</script>
+	
+</head>
+
+<body>
+	<div id="all">
+		<h1 class="holo-element">z-index: 2, shadow z-index: 1</h1>
+		<h1 class="hello-shadow">z-index: 2, shadow z-index: 1</h1>
+		<div class="holo-element" id="first">
+			<ul>
+			<li><b>z-index: 10</b></li>
+			<li>skew: 10</li>
+			<li>shadow z-index: 8</li>
+			<li>shadow skew: 5</li>
+			</ul>
+		</div>
+		<div class="shadows" id="first-shadow"></div>
+		<div class="holo-element" id="second">
+			<ul>
+			<li><b>z-index: 20</b></li>
+			<li>skew: 10</li>
+			<li>shadow z-index: 8</li>
+			<li>shadow skew: 5</li>
+			</ul>
+		</div>
+		<div class="shadows" id="second-shadow"></div>
+	</div>
+	
+</body>
+</html>
